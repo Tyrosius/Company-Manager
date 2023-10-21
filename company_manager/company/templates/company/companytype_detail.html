@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{object.name}}{% endblock %}
+
+{% block head %}
+<h1>{{object.name}}</h1>
+{% endblock %}
+
+{% block content %}
+<p>
+Beschreibung: {{object.description|default:""|linebreaks}}
+</p>
+<p>
+<a href="{% url 'page:page' %}">Zurück zur Startseite</a>
+</p>
+{% endblock %}

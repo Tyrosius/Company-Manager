@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Company bearbeiten{% endblock %}
+
+{% block head %}
+<h1>Company bearbeiten</h1>
+{% endblock %}
+
+{% block content %}
+
+<form method="POST">
+{% csrf_token %}
+{{form|crispy}}
+<input type="submit" value="jetzt Eintragen ändern">
+</form>
+
+<p>
+<a href="{% url 'page:page' %}">Zurück zur Startseite</a>
+</p>
+{% endblock %}

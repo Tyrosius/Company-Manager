@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{object.name}}{% endblock %}
+
+{% block head %}
+<h1>{{object.name}}</h1>
+<h3>{{object.company_type}}</h3>
+{% endblock %}
+
+{% block content %}
+<p>
+Beschreibung: {{object.description|default:""|linebreaks}}
+</p>
+<p>
+Betriebsgröße: {{object.company_size}}
+</p>
+<p>
+<a href="{% url 'company:company_update' company.slug %}">Company bearbeiten</a>
+</p>
+<p>
+<a href="{% url 'page:page' %}">Zurück zur Startseite</a>
+</p>
+{% endblock %}

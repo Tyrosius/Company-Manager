@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Random Company{% endblock %}
+
+{% block head %}
+<h1>Wilkommen bei einer zufälligen Company</h1>
+{% endblock %}
+
+{% block content %}
+<p>
+Es wurde <a href="{% url 'company:show_company' company.slug %}">{{company.name}}</a> zufällig ausgewählt.
+</p>
+<p>
+<a href="{% url 'page:page' %}">Zurück zur Startseite</a>
+</p>
+{% endblock %}

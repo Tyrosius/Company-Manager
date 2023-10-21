@@ -1,0 +1,19 @@
+!!veraltet!!
+{% extends "base.html" %}
+
+{% block title %}Company Liste{% endblock %}
+
+{% block head %}
+<h1>Liste aller registrierten Companies</h1>
+{% endblock %}
+
+{% block content %}
+<ul>
+{% for company in companies %}
+<li><a href="{% url 'company:show_company' company.pk %}">{{company.name}}</a></li>
+{% endfor %}
+</ul>
+<p>
+<a href="{% url 'page:page' %}">Zurück zur Startseite</a>
+</p>
+{% endblock %}

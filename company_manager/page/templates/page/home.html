@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Company Manager{% endblock %}
+
+{% block head %}
+<h1>Wilkommen beim Company Manager</h1>
+{% endblock %}
+
+{% block content %}
+<p>
+<a href="{% url 'company:companies' %}">Liste aller registrierter Unternehmen</a>
+</p>
+<p>
+<a href="{% url 'company:companies_random' %}">Zufäliges Unternehmen</a>
+</p>
+<p>
+<a href="{% url 'company:company_add' %}">Neues Unternehmen eintragen</a>
+</p>
+<p>
+<a href="{% url 'company:companytypes' %}">Liste aller Branchen</a>
+</p>
+{% endblock %}
